@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidMVIExample</string>
+    <string name="add">Ekle</string>
+    <string name="note_name">Not Adı</string>
+    <string name="note_name_hint">Not Adı</string>
+    <string name="note_content">Not İçeriği</string>
+    <string name="note_content_hint">Not İçeriği</string>
+    <string name="save_note">Kaydet</string>
+</resources>

@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: 'versions.gradle'
+    ext {
+        versions.kotlin = '1.5.10'
+    }
+    ext.kotlin_version = "1.5.10"
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${versions.android_gradle_plugin}"
+        classpath deps.kotlin.plugin
+
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
+    }
+}
+
+allprojects {
+    ext {
+        isIdeBuild = project.properties['android.injected.invoked.from.ide'] == 'true'
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
